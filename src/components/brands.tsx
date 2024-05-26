@@ -26,7 +26,7 @@ import { IconType } from "react-icons";
 
 const Brands = () => {
   return (
-    <section className=" py-24">
+    <section className=" py-24 overflow-hidden">
       <h2 className="mx-4 mb-12 text-center text-gray-400 text-4xl  md:text-5xl font-bold ">
         40+ brands we partnered with...
       </h2>
