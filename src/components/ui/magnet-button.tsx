@@ -7,13 +7,13 @@ import {
 import { useRef } from "react";
 import { MdOutlineArrowUpward } from "react-icons/md";
 
-const MagnetButtonExample = () => {
-  return (
-    <div className="grid  place-content-center  p-4">
-      <MagnetButton />
-    </div>
-  );
-};
+// const MagnetButtonExample = () => {
+//   return (
+//     <div className="grid  place-content-center  p-4">
+//       <MagnetButton />
+//     </div>
+//   );
+// };
 
 const MagnetButton = () => {
   const ref = useRef<HTMLButtonElement | null>(null);
@@ -101,4 +101,4 @@ const MagnetButton = () => {
   );
 };
 
-export default MagnetButtonExample;
+export default MagnetButton;

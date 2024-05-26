@@ -9,6 +9,7 @@ import {
 } from "framer-motion";
 import { FlipWords } from "./ui/flip-words";
 import MagnetButtonExample from "./ui/magnet-button";
+import MagnetButton from "./ui/magnet-button";
 
 const TrippyHero = () => {
   return (
@@ -140,7 +141,7 @@ const Copy = ({ opacity }: { opacity: MotionValue }) => {
       <p className="text-center text-base md:text-lg">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </p>
-      <MagnetButtonExample />
+      <MagnetButton />
       {/* <button className="bg-black px-3 py-1.5 text-base font-semibold uppercase text-white md:text-lg">
         Get started
       </button> */}

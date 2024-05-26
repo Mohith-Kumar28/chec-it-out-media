@@ -4,6 +4,7 @@ import { About } from "@/components/about";
 import Brands from "@/components/brands";
 import TrippyHero from "@/components/hero";
 import { WhatWeOffer } from "@/components/what-we-offer";
+import Works from "@/components/works";
 
 export default function Home() {
   return (
@@ -11,8 +12,9 @@ export default function Home() {
       {/* <ModeToggle /> */}
       <TrippyHero />
       <Brands />
-      <About />
       <WhatWeOffer />
+      <Works />
+      <About />
     </>
   );
 }
