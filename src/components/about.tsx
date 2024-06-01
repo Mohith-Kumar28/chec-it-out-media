@@ -92,6 +92,7 @@ const Content = ({
 
   return (
     <section
+      id="about"
       ref={ref}
       className="relative z-0 flex h-fit md:h-screen"
       style={{

@@ -14,7 +14,7 @@ import Image from "next/image";
 
 const TrippyHero = () => {
   return (
-    <section className="bg-white">
+    <section id="home" className="bg-white">
       {/* <Navigation /> */}
       <Hero />
       {/* <div className="grid h-screen place-content-center bg-violet-600 text-sm font-semibold text-white">

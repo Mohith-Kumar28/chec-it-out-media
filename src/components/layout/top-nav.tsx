@@ -93,28 +93,38 @@ const Nav = () => {
   return (
     <>
       <HamburgerButton active={active} setActive={setActive} />
-      <AnimatePresence>{active && <LinksOverlay />}</AnimatePresence>
+      <AnimatePresence>
+        {active && <LinksOverlay setActive={setActive} />}
+      </AnimatePresence>
     </>
   );
 };
 
-const LinksOverlay = () => {
+const LinksOverlay = ({
+  setActive,
+}: {
+  setActive: Dispatch<SetStateAction<boolean>>;
+}) => {
   return (
     <nav className="fixed right-4 top-4 z-40 h-[calc(100vh_-_32px)] w-[calc(100%_-_32px)] overflow-hidden">
       {/* <nav className="fixed right-4 top-4 z-40 h-[calc(100vh_-_32px)] w-[calc(100%_-_32px)] overflow-hidden"> */}
       <Logo />
-      <LinksContainer />
+      <LinksContainer setActive={setActive} />
       <FooterCTAs />
     </nav>
   );
 };
 
-const LinksContainer = () => {
+const LinksContainer = ({
+  setActive,
+}: {
+  setActive: Dispatch<SetStateAction<boolean>>;
+}) => {
   return (
     <motion.div className="space-y-4 p-12 pl-4 md:pl-20">
       {LINKS.map((l, idx) => {
         return (
-          <NavLink key={l.title} href={l.href} idx={idx}>
+          <NavLink setActive={setActive} key={l.title} href={l.href} idx={idx}>
             {l.title}
           </NavLink>
         );
@@ -127,10 +137,12 @@ const NavLink = ({
   children,
   href,
   idx,
+  setActive,
 }: {
   children: ReactNode;
   href: string;
   idx: number;
+  setActive: Dispatch<SetStateAction<boolean>>;
 }) => {
   return (
     <motion.a
@@ -146,6 +158,9 @@ const NavLink = ({
       }}
       exit={{ opacity: 0, y: -8 }}
       href={href}
+      onClick={() => {
+        setActive(false);
+      }}
       className="block text-5xl font-semibold text-gray-100 transition-colors hover:text-orange-700 md:text-7xl"
     >
       {children}.
@@ -164,26 +179,16 @@ const Logo = () => {
         transition: { delay: 0.5, duration: 0.5, ease: "easeInOut" },
       }}
       exit={{ opacity: 0, y: -12 }}
-      href="#"
-      className="grid h-20 w-20 place-content-center rounded-br-xl rounded-tl-xl bg-white transition-colors "
+      href="#home"
+      className="px-8 "
     >
-      <svg
-        width="50"
-        height="39"
-        viewBox="0 0 50 39"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="fill-primary"
-      >
-        <path
-          d="M16.4992 2H37.5808L22.0816 24.9729H1L16.4992 2Z"
-          stopColor="#FFFFFF"
-        ></path>
-        <path
-          d="M17.4224 27.102L11.4192 36H33.5008L49 13.0271H32.7024L23.2064 27.102H17.4224Z"
-          stopColor="#FFFFFF"
-        ></path>
-      </svg>
+      <Image
+        className="bg-transparent ml-4"
+        alt="check-it-out-media-logo.svg"
+        src={"/check-it-out-media-logo.svg"}
+        height={200}
+        width={200}
+      />
     </motion.a>
   );
 };
@@ -260,7 +265,7 @@ const FooterCTAs = () => {
         })}
       </div>
 
-      <motion.button
+      {/* <motion.button
         initial={{ opacity: 0, y: 8 }}
         animate={{
           opacity: 1,
@@ -275,7 +280,7 @@ const FooterCTAs = () => {
         className="absolute bottom-2 right-2 flex items-center gap-2 rounded-full bg-orange-700 px-3 py-3 text-4xl uppercase text-orange-200 transition-colors hover:bg-white hover:text-orange-600 md:bottom-4 md:right-4 md:px-6 md:text-2xl"
       >
         <span className="hidden md:block">contact us</span> <FiArrowRight />
-      </motion.button>
+      </motion.button> */}
     </>
   );
 };
@@ -283,19 +288,19 @@ const FooterCTAs = () => {
 const LINKS = [
   {
     title: "home",
-    href: "#",
+    href: "#home",
   },
   {
-    title: "features",
-    href: "#",
+    title: "about",
+    href: "#about",
   },
   {
-    title: "blog",
-    href: "#",
+    title: "works",
+    href: "#works",
   },
   {
-    title: "careers",
-    href: "#",
+    title: "contact",
+    href: "#contact",
   },
 ];
 

@@ -5,7 +5,7 @@ import MagnetButton from "./ui/magnet-button";
 
 export function Contact() {
   return (
-    <div className="overflow-hidden">
+    <div id="contact" className="overflow-hidden">
       <HeroHighlight>
         <div className="md:flex-row flex flex-col gap-8   px-4">
           <motion.h1
