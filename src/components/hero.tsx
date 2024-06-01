@@ -91,7 +91,7 @@ const Trippy = ({
       style={{ top }}
       className="absolute bottom-0 left-0 right-0 overflow-hidden bg-black"
     >
-      {generateSections(0, "black", scale, rotate)}
+      {generateSections(0, "#FE6E4A", scale, rotate)}
     </motion.div>
   );
 };
