@@ -68,7 +68,7 @@ const generateSections = (
     return <></>;
   }
 
-  const nextColor = color === "black" ? "white" : "black";
+  const nextColor = color === "#FE6E4A" ? "white" : "#FE6E4A";
 
   return (
     <Section rotate={rotate} scale={scale} background={color}>
@@ -148,7 +148,7 @@ const Copy = ({ opacity }: { opacity: MotionValue }) => {
       </button> */}
 
       {/* <div className="absolute -left-28 -top-28 h-56 w-56 rotate-45 bg-black" /> */}
-      <div className="absolute -bottom-24 -right-24 h-48 w-48 rotate-45 bg-black" />
+      {/* <div className="absolute -bottom-24 -right-24 h-48 w-48 rotate-45 bg-black" /> */}
     </motion.div>
   );
 };
