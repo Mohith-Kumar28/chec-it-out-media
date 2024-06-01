@@ -8,6 +8,7 @@ import {
   useScroll,
 } from "framer-motion";
 import { FiArrowRight, FiArrowUpRight } from "react-icons/fi";
+import Image from "next/image";
 
 const CornerNav = () => {
   return (
@@ -23,7 +24,7 @@ const CornerNav = () => {
 export const TopNav = () => {
   const { scrollY } = useScroll();
 
-  const [hidden, setHidden] = useState(true);
+  const [hidden, setHidden] = useState(false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious() || 0;
@@ -43,10 +44,10 @@ export const TopNav = () => {
         }}
         animate={hidden ? "hidden" : "visible"}
         transition={{ duration: 0.35, ease: "easeInOut" }}
-        className="fixed top-0 z-10 flex h-28 w-full items-center justify-between  px-2 text-white"
+        className="fixed top-0 z-30 flex h-28 w-full items-center justify-between  px-2 text-white"
       >
         {/* SVG from logoipsum */}
-        <svg
+        {/* <svg
           width="50"
           height="39"
           viewBox="0 0 50 39"
@@ -62,7 +63,15 @@ export const TopNav = () => {
             d="M17.4224 27.102L11.4192 36H33.5008L49 13.0271H32.7024L23.2064 27.102H17.4224Z"
             stopColor="#000000"
           ></path>
-        </svg>
+        </svg> */}
+
+        <Image
+          className="bg-transparent"
+          alt="check-it-out-media-logo.svg"
+          src={"/check-it-out-media-logo.svg"}
+          height={200}
+          width={200}
+        />
 
         {/* <div className="flex gap-2">
         <button className="px-3 py-1.5 font-semibold uppercase text-white hover:bg-white/20">

@@ -6,7 +6,7 @@ const Works = () => {
   return (
     <div className="px-4 md:px-8 py-28">
       <div className="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end md:px-8">
-        <h2 className="max-w-lg text-gray-400 font-bold text-4xl  md:text-5xl">
+        <h2 className="max-w-lg text-gray-600 font-bold text-4xl  md:text-5xl">
           Get a glance
           <span className="text-primary"> Of our works</span>
         </h2>

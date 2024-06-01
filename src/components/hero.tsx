@@ -10,6 +10,7 @@ import {
 import { FlipWords } from "./ui/flip-words";
 import MagnetButtonExample from "./ui/magnet-button";
 import MagnetButton from "./ui/magnet-button";
+import Image from "next/image";
 
 const TrippyHero = () => {
   return (
@@ -146,7 +147,7 @@ const Copy = ({ opacity }: { opacity: MotionValue }) => {
         Get started
       </button> */}
 
-      <div className="absolute -left-28 -top-28 h-56 w-56 rotate-45 bg-black" />
+      {/* <div className="absolute -left-28 -top-28 h-56 w-56 rotate-45 bg-black" /> */}
       <div className="absolute -bottom-24 -right-24 h-48 w-48 rotate-45 bg-black" />
     </motion.div>
   );
@@ -214,7 +215,7 @@ const OverlayLogo = ({ scale }: { scale: MotionValue }) => {
       className="pointer-events-none absolute inset-0 z-[5] grid place-content-center"
     >
       {/* SVG from logoipsum */}
-      <svg
+      {/* <svg
         width="50"
         height="39"
         viewBox="0 0 50 39"
@@ -230,7 +231,14 @@ const OverlayLogo = ({ scale }: { scale: MotionValue }) => {
           d="M17.4224 27.102L11.4192 36H33.5008L49 13.0271H32.7024L23.2064 27.102H17.4224Z"
           stopColor="#000000"
         ></path>
-      </svg>
+      </svg> */}
+      <Image
+        className="bg-transparent"
+        alt="check-it-out-media-logo.svg"
+        src={"/check-it-out-media-logo.svg"}
+        height={600}
+        width={600}
+      />
     </motion.div>
   );
 };
