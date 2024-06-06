@@ -11,6 +11,7 @@ import { FlipWords } from "./ui/flip-words";
 import MagnetButtonExample from "./ui/magnet-button";
 import MagnetButton from "./ui/magnet-button";
 import Image from "next/image";
+import { BsBoxArrowUpRight } from "react-icons/bs";
 
 const TrippyHero = () => {
   return (
@@ -45,7 +46,7 @@ const Hero = () => {
   const logoScale = useTransform(scrollYProgress, [0, 0.8, 1], [0, 0, 1]);
 
   return (
-    <div ref={targetRef} className="relative z-0 h-[800vh] bg-neutral-200">
+    <div ref={targetRef} className="relative z-0 h-[200vh] bg-neutral-200">
       <div className="sticky top-0 h-screen bg-white">
         <Copy opacity={opacity} />
         <Trippy rotate={rotate} top={top} scale={scale} />
@@ -122,6 +123,30 @@ const Section = ({
   );
 };
 
+const AIButton = () => {
+  return (
+    <button className="text-white font-medium px-4 py-2 rounded-full overflow-hidden relative transition-transform hover:scale-105 active:scale-95">
+      <span className="relative z-10 flex align-middle justify-center gap-3">
+        We are hiring
+        <div className="flex flex-col justify-center">
+          <BsBoxArrowUpRight />
+        </div>
+      </span>
+      <motion.div
+        initial={{ left: 0 }}
+        animate={{ left: "-300%" }}
+        transition={{
+          repeat: Infinity,
+          repeatType: "mirror",
+          duration: 4,
+          ease: "linear",
+        }}
+        className="bg-[linear-gradient(to_right,#8f14e6,#e614dc,#e61453,#e68414,#e6e614)] absolute z-0 inset-0 w-[400%]"
+      ></motion.div>
+    </button>
+  );
+};
+
 const Copy = ({ opacity }: { opacity: MotionValue }) => {
   const words = ["better", "beautiful", "modern"];
   return (
@@ -133,16 +158,19 @@ const Copy = ({ opacity }: { opacity: MotionValue }) => {
       {/* <h1 className="text-center text-5xl font-black md:text-7xl">
         Drive in the deep end
       </h1> */}
+
+      <AIButton />
+
       <div className=" mx-auto text-center text-5xl font-black md:text-7xl dark:text-neutral-600 text-neutral-400">
         Build
         <FlipWords words={words} /> <br />
         Ads with CheckItOutMedia
       </div>
 
-      <p className="text-center text-base md:text-lg">
+      {/* <p className="text-center text-base md:text-lg">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      </p>
-      <MagnetButton />
+      </p> */}
+      {/* <MagnetButton /> */}
       {/* <button className="bg-black px-3 py-1.5 text-base font-semibold uppercase text-white md:text-lg">
         Get started
       </button> */}

@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { HeroHighlight, Highlight } from "./ui/hero-highlight";
 import MagnetButton from "./ui/magnet-button";
+import Link from "next/link";
 
 export function Contact() {
   return (
@@ -29,7 +30,9 @@ export function Contact() {
               goes here
             </Highlight>
           </motion.h1>
-          <MagnetButton />
+          <Link href="https://wa.me/+919611544337">
+            <MagnetButton />
+          </Link>
         </div>
       </HeroHighlight>
     </div>

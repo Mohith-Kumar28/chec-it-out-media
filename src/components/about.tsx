@@ -169,45 +169,23 @@ const features: FeatureType[] = [
   {
     id: 1,
     callout: "About Title 1",
-    title: "About Title 1",
+    title: "A LITTLE ABOUT US",
     imgUrl:
       "https://images.unsplash.com/photo-1506157786151-b8491531f063?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor iusto quaerat qui, illo incidunt suscipit fugiat distinctio officia earum eius quae officiis quis harum animi.",
+      "At Check It Out Media there is usually a collision of creativity and strategy and then BOOM -  we bring your brand to life. We have had the pleasure of collaborating with a diverse range of clients, from innovative startups to seasoned businesses. Our content isn't just trendy—it's a masterclass in storytelling. Our focus is to tell the story our clients want to convey to their audience. From fun trending reels and memes to intensely engaging pieces that captivate your audience, Check It Out Media does it all!  ",
     contentPosition: "r",
     Icon: FiEye,
   },
   {
     id: 2,
     callout: "About Title 2",
-    title: "About Title 2",
+    title: "BRANDS WE FOSTER",
     imgUrl:
       "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor iusto quaerat qui, illo incidunt suscipit fugiat distinctio officia earum eius quae officiis quis harum animi.",
+      "Our eclectic client roster includes Karnatic, Pegs N Bottles, Spaine, Dessange and many more. Each brand has its own unique groove, and we dance to their tunes with customized strategies. At Check It Out Media, we believe in making every piece of content distinctive, ensuring a lasting impression and a memorable brand presence. After all a brand is remembered by the story it tells. ",
     contentPosition: "l",
     Icon: FiSearch,
-  },
-  {
-    id: 3,
-    callout: "About Title 3",
-    title: "About Title 3",
-    imgUrl:
-      "https://images.unsplash.com/photo-1516450137517-162bfbeb8dba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor iusto quaerat qui, illo incidunt suscipit fugiat distinctio officia earum eius quae officiis quis harum animi.",
-    contentPosition: "r",
-    Icon: FiPlay,
-  },
-  {
-    id: 4,
-    callout: "About Title 4",
-    title: "About Title 4",
-    imgUrl:
-      "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor iusto quaerat qui, illo incidunt suscipit fugiat distinctio officia earum eius quae officiis quis harum animi.",
-    contentPosition: "l",
-    Icon: FiDollarSign,
   },
 ];
