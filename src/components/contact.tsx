@@ -24,10 +24,10 @@ export function Contact() {
             }}
             className="font-bold text-4xl   md:text-5xl px-4  text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-left mx-auto "
           >
-            Some Contact section headline
+            Connect us anytime through
             <br />
             <Highlight className="text-black dark:text-white">
-              goes here
+              Whats App
             </Highlight>
           </motion.h1>
           <Link href="https://wa.me/+919611544337">
