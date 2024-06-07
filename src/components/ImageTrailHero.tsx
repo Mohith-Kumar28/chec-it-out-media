@@ -4,6 +4,7 @@ import React, { MouseEventHandler, ReactNode, useRef } from "react";
 import { motion } from "framer-motion";
 import { FiArrowDownCircle, FiDollarSign } from "react-icons/fi";
 import { SiApple } from "react-icons/si";
+import Image from "next/image";
 
 export const ImageTrailHero = () => {
   return (
@@ -211,11 +212,18 @@ export const MouseImageTrail = ({
       {children}
 
       {images.map((img, index) => (
-        <img
-          className="pointer-events-none absolute left-0 top-0 h-36 z-0 w-auto rounded-xl border-2 border-slate-900 bg-slate-800 object-cover opacity-0"
+        <Image
+          key={index}
           src={img}
           alt={`Mouse move image ${index}`}
-          key={index}
+          width={300} // Set the width to a smaller value
+          height={300} // Set the height to a smaller value
+          layout="fill" // Use responsive layout to maintain aspect ratio
+          objectFit="cover"
+          quality={50} // Adjust the quality as needed
+          placeholder="blur" // Use blur placeholder for better performance
+          blurDataURL={`${img}?w=16&q=20`} // Generate a low-res version for the blur placeholder
+          className="rounded-xl border-2 border-slate-900 bg-slate-800 pointer-events-none absolute left-0 top-0 h-44 z-0 opacity-0"
           data-mouse-move-index={index}
         />
       ))}
