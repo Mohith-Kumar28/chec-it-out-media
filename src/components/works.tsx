@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { useRef, useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
 
 const Works = () => {
@@ -13,25 +14,21 @@ const Works = () => {
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 w-full max-w-6xl mx-auto">
         <Card
-          heading="Work 1"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, exercitationem."
-          imgSrc="https://images.unsplash.com/photo-1506157786151-b8491531f063?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+          heading="Dessange"
+          description=""
+          videoSrc="/works/videos/dessange.mp4"
         />
         <Card
-          heading="Work 2"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, exercitationem."
-          imgSrc="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+          heading="Juveria"
+          description=""
+          videoSrc="/works/videos/juveria.mp4"
         />
         <Card
-          heading="Work 3"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, exercitationem."
-          imgSrc="https://images.unsplash.com/photo-1516450137517-162bfbeb8dba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+          heading="Beer Oota"
+          description=""
+          videoSrc="/works/videos/beerOota.mp4"
         />
-        <Card
-          heading="Work 4"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, exercitationem."
-          imgSrc="https://images.unsplash.com/photo-1576328077645-2dd68934d2b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80"
-        />
+        <Card heading="PNB" description="" videoSrc="/works/videos/pnb.mp4" />
       </div>
     </div>
   );
@@ -40,28 +37,57 @@ const Works = () => {
 const Card = ({
   heading,
   description,
-  imgSrc,
+  videoSrc,
 }: {
   heading: string;
   description: string;
-  imgSrc: string;
+  videoSrc: string;
 }) => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null); // Create a ref for the video element
+
+  // Function to handle hover effect
+  const handleHover = () => {
+    if (videoRef.current) {
+      if (!isPlaying) {
+        videoRef.current.play(); // Play the video if it's not already playing
+      } else {
+        videoRef.current.pause(); // Pause the video if it's playing
+      }
+      setIsPlaying(!isPlaying); // Toggle the isPlaying state
+    }
+  };
+
   return (
     <motion.div
-      transition={{
-        staggerChildren: 0.035,
-      }}
-      whileHover="hover"
-      className="w-full h-64 bg-slate-300 overflow-hidden cursor-pointer group relative"
+      transition={{ staggerChildren: 0.035 }}
+      onHoverStart={() => {
+        videoRef?.current?.play(), setIsPlaying(true);
+      }} // Use the handleHover function on hover
+      onHoverEnd={() => {
+        videoRef?.current?.pause(), setIsPlaying(false);
+      }} // Use the handleHover function on hover
+      className="w-full h-[500px] bg-slate-300 overflow-hidden cursor-pointer group relative"
     >
       <div
-        className="absolute inset-0 saturate-100 md:saturate-0 md:group-hover:saturate-100 group-hover:scale-110 transition-all duration-500"
-        style={{
-          backgroundImage: `url(${imgSrc})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      />
+        className={`absolute inset-0 transition-opacity duration-500 ease-in-out `}
+      >
+        <div className="bg-black opacity-50"></div> {/* Black overlay */}
+      </div>
+      <video
+        ref={videoRef} // Attach the ref to the video element
+        // autoPlay
+        loop
+        muted
+        className={`absolute z-10 w-auto min-w-full min-h-full max-w-none ${
+          isPlaying ? "saturate-100" : "saturate-0"
+        } `}
+      >
+        <source src={videoSrc} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Rest of the component remains unchanged */}
       <div className="p-4 relative z-20 h-full text-white group-hover:text-white transition-colors duration-500 flex flex-col justify-between">
         <div className="w-full h-36 bg-gradient-to-t from-black -z-10 absolute bottom-0 left-0"></div>
         <FiArrowRight className="text-3xl group-hover:-rotate-45 transition-transform duration-500 ml-auto" />
