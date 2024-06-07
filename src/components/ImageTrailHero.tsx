@@ -216,14 +216,14 @@ export const MouseImageTrail = ({
           key={index}
           src={img}
           alt={`Mouse move image ${index}`}
-          width={300} // Set the width to a smaller value
-          height={300} // Set the height to a smaller value
+          width={100} // Set the width to a smaller value
+          height={100} // Set the height to a smaller value
           layout="fit" // Use responsive layout to maintain aspect ratio
           objectFit="cover"
           quality={50} // Adjust the quality as needed
           placeholder="blur" // Use blur placeholder for better performance
           blurDataURL={`${img}?w=16&q=20`} // Generate a low-res version for the blur placeholder
-          className="rounded-xl border-2 border-slate-900 bg-slate-800 pointer-events-none absolute left-0 top-0  z-0 opacity-0"
+          className="rounded-xl border-2 border-slate-900 bg-slate-800 pointer-events-none absolute left-0 top-0 w-28 z-0 opacity-0"
           data-mouse-move-index={index}
         />
       ))}

@@ -155,7 +155,7 @@ const Copy = ({ opacity }: { opacity: MotionValue }) => {
       renderImageBuffer={50}
       rotationRange={25}
       images={Array.from(
-        { length: 105 },
+        { length: 50 },
         (_, i) => `/imgTrail/${String(i + 1).padStart(3, "0")}.jpg`
       )}
     >
