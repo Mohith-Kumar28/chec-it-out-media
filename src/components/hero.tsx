@@ -12,6 +12,7 @@ import MagnetButtonExample from "./ui/magnet-button";
 import MagnetButton from "./ui/magnet-button";
 import Image from "next/image";
 import { BsBoxArrowUpRight } from "react-icons/bs";
+import { ImageTrailHero, MouseImageTrail } from "./ImageTrailHero";
 
 const TrippyHero = () => {
   return (
@@ -150,34 +151,28 @@ const AIButton = () => {
 const Copy = ({ opacity }: { opacity: MotionValue }) => {
   const words = ["better", "beautiful", "modern"];
   return (
-    <motion.div
-      style={{ opacity }}
-      // Padding top + 56px to accommodate for navbar height
-      className="relative flex h-4/5 flex-col items-center justify-center gap-4 overflow-hidden bg-white p-4 pt-[calc(56px_+_16px)] text-black"
+    <MouseImageTrail
+      renderImageBuffer={50}
+      rotationRange={25}
+      images={Array.from(
+        { length: 105 },
+        (_, i) => `/imgTrail/${String(i + 1).padStart(3, "0")}.jpg`
+      )}
     >
-      {/* <h1 className="text-center text-5xl font-black md:text-7xl">
-        Drive in the deep end
-      </h1> */}
+      <motion.div
+        style={{ opacity }}
+        // Padding top + 56px to accommodate for navbar height
+        className="relative z-[99999] flex h-4/5 flex-col items-center justify-center gap-4 overflow-hidden  p-4 pt-[calc(56px_+_16px)] text-black"
+      >
+        <AIButton />
 
-      <AIButton />
-
-      <div className=" mx-auto text-center text-5xl font-black md:text-7xl dark:text-neutral-600 text-neutral-400">
-        Build
-        <FlipWords words={words} /> <br />
-        Ads with CheckItOutMedia
-      </div>
-
-      {/* <p className="text-center text-base md:text-lg">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      </p> */}
-      {/* <MagnetButton /> */}
-      {/* <button className="bg-black px-3 py-1.5 text-base font-semibold uppercase text-white md:text-lg">
-        Get started
-      </button> */}
-
-      {/* <div className="absolute -left-28 -top-28 h-56 w-56 rotate-45 bg-black" /> */}
-      {/* <div className="absolute -bottom-24 -right-24 h-48 w-48 rotate-45 bg-black" /> */}
-    </motion.div>
+        <div className=" mx-auto backdrop-blur-xl bg-white/70 rounded-lg p-4  text-center text-5xl font-black md:text-7xl text-neutral-600 ">
+          Build
+          <FlipWords words={words} /> <br />
+          Ads with CheckItOutMedia
+        </div>
+      </motion.div>
+    </MouseImageTrail>
   );
 };
 

@@ -26,11 +26,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="bg-black">
-            <TopNav />
-            {children}
-            <Footer />
-          </div>
+          {/* <div className="bg-black"> */}
+          <TopNav />
+          {children}
+          <Footer />
+          {/* </div> */}
         </ThemeProvider>
       </body>
     </html>

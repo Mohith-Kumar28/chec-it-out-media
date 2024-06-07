@@ -9,6 +9,17 @@ import {
 } from "framer-motion";
 import { FiArrowRight, FiArrowUpRight } from "react-icons/fi";
 import Image from "next/image";
+import {
+  FaFacebookSquare,
+  FaInstagramSquare,
+  FaLinkedin,
+} from "react-icons/fa";
+import Link from "next/link";
+import {
+  PiFacebookLogo,
+  PiInstagramLogo,
+  PiLinkedinLogo,
+} from "react-icons/pi";
 
 const CornerNav = () => {
   return (
@@ -209,7 +220,6 @@ const HamburgerButton = ({
         style={{ top: 16, right: 16 }}
         className="fixed z-30 rounded-xl bg-gradient-to-br from-primary to-primary shadow-lg shadow-orange-800/20"
       />
-
       <motion.button
         initial={false}
         animate={active ? "open" : "closed"}
@@ -233,8 +243,28 @@ const HamburgerButton = ({
           className="absolute block h-1 w-5 bg-white"
           style={{ x: "-50%", y: "50%" }}
         />
+        <SocialLinks />
       </motion.button>
     </>
+  );
+};
+
+const SocialLinks = () => {
+  return (
+    <nav className=" absolute right-2 top-20 rounded-b-sm z-50 w-fit bg-zinc-950  p-4 flex flex-col items-center gap-2">
+      <Link
+        href="https://www.instagram.com/checkitoutmedia.in?igsh=MWtkbjRsZzBxOWZqZQ==
+"
+      >
+        <PiInstagramLogo className="text-3xl text-white" />
+      </Link>
+      <Link href="https://www.facebook.com/share/X86VuMYbp4bzJTQX/?mibextid=LQQJ4d">
+        <PiFacebookLogo className="text-3xl text-white" />
+      </Link>{" "}
+      <Link href="https://www.linkedin.com/company/check-it-out-media/">
+        <PiLinkedinLogo className="text-3xl text-white" />
+      </Link>
+    </nav>
   );
 };
 

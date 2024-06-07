@@ -39,7 +39,7 @@ const Footer = () => {
             @Mohith
           </a>
         </p>
-        <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        {/* <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
           <a className="text-gray-600">
             <svg
               fill="currentColor"
@@ -95,7 +95,7 @@ const Footer = () => {
               <circle cx="4" cy="4" r="2" stroke="none"></circle>
             </svg>
           </a>
-        </span>
+        </span> */}
       </div>
     </footer>
   );

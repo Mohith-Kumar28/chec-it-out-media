@@ -1,5 +1,6 @@
 // import { ModeToggle } from "@/components/ui/mode-toggle";
 
+import { ImageTrailHero } from "@/components/ImageTrailHero";
 import About from "@/components/about";
 import Brands from "@/components/brands";
 import { Contact } from "@/components/contact";
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <>
       {/* <ModeToggle /> */}
+      {/* <ImageTrailHero /> */}
       <TrippyHero />
       <Brands />
       <About />
