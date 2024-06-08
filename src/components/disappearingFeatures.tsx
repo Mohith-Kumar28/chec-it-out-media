@@ -82,7 +82,7 @@ const Carousel = () => {
         />
       </div>
 
-      <Buffer />
+      {/* <Buffer /> */}
     </div>
   );
 };
@@ -111,7 +111,7 @@ const CarouselItem = ({
         opacity,
         scale,
       }}
-      className="grid aspect-video w-full shrink-0 place-content-center rounded-2xl bg-neutral-900"
+      className="grid aspect-video w-full shrink-0 place-content-center rounded-2xl "
     >
       {/* <span className="text-lg text-neutral-600">Feature demo here</span> */}
       <video width="340" height="400" controls loop muted className={` `}>
