@@ -19,6 +19,7 @@ import {
   PiFacebookLogo,
   PiInstagramLogo,
   PiLinkedinLogo,
+  PiWhatsappLogo,
 } from "react-icons/pi";
 
 const CornerNav = () => {
@@ -263,6 +264,9 @@ const SocialLinks = () => {
       </Link>{" "}
       <Link href="https://www.linkedin.com/company/check-it-out-media/">
         <PiLinkedinLogo className="text-3xl text-white" />
+      </Link>{" "}
+      <Link href="https://wa.me/+919611544337">
+        <PiWhatsappLogo className="text-3xl text-white" />
       </Link>
     </nav>
   );
