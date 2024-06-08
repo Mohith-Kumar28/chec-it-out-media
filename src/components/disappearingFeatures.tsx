@@ -114,7 +114,7 @@ const CarouselItem = ({
       className="grid aspect-video w-full shrink-0 place-content-center rounded-2xl bg-neutral-900"
     >
       {/* <span className="text-lg text-neutral-600">Feature demo here</span> */}
-      <video controls loop muted className={` `}>
+      <video width="340" height="400" controls loop muted className={` `}>
         <source src={videoSrc} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
