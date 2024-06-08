@@ -13,6 +13,7 @@ import MagnetButton from "./ui/magnet-button";
 import Image from "next/image";
 import { BsBoxArrowUpRight } from "react-icons/bs";
 import { ImageTrailHero, MouseImageTrail } from "./ImageTrailHero";
+import { RiScrollToBottomFill } from "react-icons/ri";
 
 const TrippyHero = () => {
   return (
@@ -47,7 +48,7 @@ const Hero = () => {
   const logoScale = useTransform(scrollYProgress, [0, 0.8, 1], [0, 0, 1]);
 
   return (
-    <div ref={targetRef} className="relative z-0 h-[200vh] bg-neutral-200">
+    <div ref={targetRef} className="relative z-0 h-[300vh] bg-neutral-200">
       <div className="sticky top-0 h-screen bg-white">
         <Copy opacity={opacity} />
         <Trippy rotate={rotate} top={top} scale={scale} />
@@ -127,10 +128,10 @@ const Section = ({
 const AIButton = () => {
   return (
     <button className="text-white font-medium px-4 py-2 rounded-full overflow-hidden relative transition-transform hover:scale-105 active:scale-95">
-      <span className="relative z-10 flex align-middle justify-center gap-3">
-        We are hiring
+      <span className="relative z-10 flex align-middle justify-center gap-2">
+        Curious to know more about our work? Scroll down to check it out
         <div className="flex flex-col justify-center">
-          <BsBoxArrowUpRight />
+          <RiScrollToBottomFill className="text-2xl text-white" />
         </div>
       </span>
       <motion.div
@@ -149,7 +150,7 @@ const AIButton = () => {
 };
 
 const Copy = ({ opacity }: { opacity: MotionValue }) => {
-  const words = ["better", "beautiful", "modern"];
+  const words = ["Brands", "Memories", "Content", "Legacies"];
   return (
     <MouseImageTrail
       renderImageBuffer={50}
@@ -167,9 +168,9 @@ const Copy = ({ opacity }: { opacity: MotionValue }) => {
         <AIButton />
 
         <div className=" mx-auto backdrop-blur-xl bg-white/70 rounded-lg p-4  text-center text-5xl font-black md:text-7xl text-neutral-600 ">
-          Build
+          Building
           <FlipWords words={words} /> <br />
-          Ads with CheckItOutMedia
+          with CheckItOutMedia
         </div>
       </motion.div>
     </MouseImageTrail>

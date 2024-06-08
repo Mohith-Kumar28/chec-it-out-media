@@ -66,7 +66,7 @@ export const FlipWords = ({
           "z-10 inline-block relative text-left text-5xl font-black md:text-7xl text-primary  px-2",
           className
         )}
-        key={currentWord}
+        key={currentWord.split("")[0]}
       >
         {currentWord.split("").map((letter, index) => (
           <motion.span

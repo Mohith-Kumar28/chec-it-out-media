@@ -28,7 +28,7 @@ const Brands = () => {
   return (
     <section className=" py-24 overflow-hidden">
       <h2 className="mx-4 mb-12 text-center text-gray-600 text-4xl  md:text-5xl font-bold ">
-        <span className="text-primary"> 40+ </span>brands we partnered with...
+        <span className="text-primary"> Brands </span> partnered with...
       </h2>
       <div className="flex translate-y-[50%] rotate-[7deg] scale-110 overflow-hidden border-y-4 border-neutral-900 bg-neutral-50">
         <TranslateWrapper>

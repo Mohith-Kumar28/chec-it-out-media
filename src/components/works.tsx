@@ -2,17 +2,19 @@
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
+import { DisappearingFeatures } from "./disappearingFeatures";
 
 const Works = () => {
   return (
     <div id="works" className="px-4 md:px-8 py-28">
-      <div className="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end md:px-8">
+      {/* <div className="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end md:px-8">
         <h2 className="max-w-md text-gray-600 font-bold text-4xl  md:text-5xl">
           A sneak peak into
           <span className="text-primary"> our works</span>
         </h2>
-      </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 w-full max-w-6xl mx-auto">
+      </div> */}
+      <DisappearingFeatures />
+      {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 w-full max-w-6xl mx-auto">
         <Card
           heading="Dessange"
           description=""
@@ -29,7 +31,7 @@ const Works = () => {
           videoSrc="/works/videos/beerOota.mp4"
         />
         <Card heading="PNB" description="" videoSrc="/works/videos/pnb.mp4" />
-      </div>
+      </div> */}
     </div>
   );
 };
