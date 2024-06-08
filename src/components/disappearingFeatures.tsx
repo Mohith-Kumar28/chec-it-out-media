@@ -123,7 +123,7 @@ const CarouselItem = ({
 };
 
 const Gradient = () => (
-  <div className="sticky top-0 z-10 hidden h-24 w-full bg-gradient-to-b from-background to-background/0 md:block" />
+  <div className="sticky top-0 z-10 hidden h-24 w-full bg-gradient-to-b from-black to-black/0 md:block" />
 );
 
 const Buffer = () => <div className="h-24 w-full md:h-48" />;
