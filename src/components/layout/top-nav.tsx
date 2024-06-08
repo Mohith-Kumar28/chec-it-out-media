@@ -254,6 +254,7 @@ const SocialLinks = () => {
   return (
     <nav className=" absolute right-2 top-20 rounded-b-sm z-50 w-fit bg-zinc-950  p-4 flex flex-col items-center gap-2">
       <Link
+        target="_blank"
         className="hover:bg-gray-500 rounded-sm"
         href="https://www.instagram.com/checkitoutmedia.in?igsh=MWtkbjRsZzBxOWZqZQ==
 "
@@ -261,18 +262,21 @@ const SocialLinks = () => {
         <PiInstagramLogo className="text-3xl text-white" />
       </Link>
       <Link
+        target="_blank"
         className="hover:bg-gray-500 rounded-sm"
         href="https://www.facebook.com/share/X86VuMYbp4bzJTQX/?mibextid=LQQJ4d"
       >
         <PiFacebookLogo className="text-3xl text-white" />
       </Link>{" "}
       <Link
+        target="_blank"
         className="hover:bg-gray-500 rounded-sm"
         href="https://www.linkedin.com/company/check-it-out-media/"
       >
         <PiLinkedinLogo className="text-3xl text-white" />
       </Link>{" "}
       <Link
+        target="_blank"
         className="hover:bg-gray-500 rounded-sm"
         href="https://wa.me/+919611544337"
       >
