@@ -5,6 +5,7 @@ import About from "@/components/about";
 import Brands from "@/components/brands";
 import { Contact } from "@/components/contact";
 import TrippyHero from "@/components/hero";
+import Hiring from "@/components/hiring";
 import { WhatWeOffer } from "@/components/what-we-offer";
 import Works from "@/components/works";
 

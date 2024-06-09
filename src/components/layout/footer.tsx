@@ -1,11 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import Hiring from "../hiring";
 
 const Footer = () => {
   return (
     <footer className="text-gray-600 bg-zinc-950 body-font border-t border-gray-600">
-      <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <div className="container px-5 py-8 gap-4 mx-auto flex items-center sm:flex-row flex-col">
         <a className="flex title-font font-medium items-center md:justify-start justify-center text-white">
           {/* <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -96,6 +97,9 @@ const Footer = () => {
             </svg>
           </a>
         </span> */}
+        <div className="flex md:justify-end w-full ">
+          <Hiring />
+        </div>
       </div>
     </footer>
   );

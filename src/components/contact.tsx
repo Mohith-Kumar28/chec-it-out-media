@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { HeroHighlight, Highlight } from "./ui/hero-highlight";
 import MagnetButton from "./ui/magnet-button";
 import Link from "next/link";
+import Hiring from "./hiring";
 
 export function Contact() {
   return (
@@ -34,6 +35,7 @@ export function Contact() {
             <MagnetButton />
           </Link>
         </div>
+        {/* <Hiring /> */}
       </HeroHighlight>
     </div>
   );
