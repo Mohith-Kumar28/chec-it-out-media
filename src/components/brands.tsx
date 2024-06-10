@@ -23,14 +23,18 @@ import {
   SiGodaddy,
 } from "react-icons/si";
 import { IconType } from "react-icons";
-
+import Image from "next/image";
+const brandLogosPaths = Array.from(
+  { length: 9 },
+  (_, i) => `/brands/${String(i + 1).padStart(3, "0")}.png`
+);
 const Brands = () => {
   return (
     <section className=" py-24 overflow-hidden">
       <h2 className="mx-4 mb-12 text-center text-gray-600 text-4xl  md:text-5xl font-bold ">
         <span className="text-primary"> Brands </span> partnered with...
       </h2>
-      <div className="flex translate-y-[50%] rotate-[7deg] scale-110 overflow-hidden border-y-4 border-neutral-900 bg-neutral-50">
+      <div className="flex translate-y-[50%] rotate-[7deg] scale-110 overflow-hidden border-y-4 border-neutral-900 bg-zinc-900 ">
         <TranslateWrapper>
           <LogoItemsTop />
         </TranslateWrapper>
@@ -41,7 +45,7 @@ const Brands = () => {
           <LogoItemsTop />
         </TranslateWrapper>
       </div>
-      <div className="flex -translate-y-[50%] -rotate-[7deg] scale-110 overflow-hidden border-y-4 border-neutral-900 bg-neutral-50">
+      <div className="flex -translate-y-[50%] -rotate-[7deg] scale-110 overflow-hidden border-y-4 border-gray-200 bg-zinc-900">
         <TranslateWrapper reverse>
           <LogoItemsBottom />
         </TranslateWrapper>
@@ -75,49 +79,33 @@ const TranslateWrapper = ({
   );
 };
 
-const LogoItem = ({ Icon, name }: { Icon: IconType; name: string }) => {
+const LogoItem = ({ imagePath, name }: { imagePath: string; name: string }) => {
   return (
-    <a
-      href="/"
-      rel="nofollow"
-      target="_blank"
-      className="flex items-center justify-center gap-4 px-4 py-4 text-black transition-colors hover:bg-neutral-200 md:py-6"
-    >
-      <Icon className="text-3xl md:text-4xl" />
-      <span className="whitespace-nowrap text-2xl font-semibold uppercase md:text-3xl">
-        {name}
-      </span>
-    </a>
+    <div className=" size-28 mx-8 flex justify-center align-middle ">
+      <Image
+        src={imagePath}
+        alt={name}
+        width={148} // Adjust these values based on your actual image dimensions
+        height={148}
+        className="object-contain" // Use object-fit utilities if needed
+      />
+    </div>
   );
 };
 
 const LogoItemsTop = () => (
   <>
-    <LogoItem Icon={SiNike} name="Nike" />
-    <LogoItem Icon={Si3M} name="3M" />
-    <LogoItem Icon={SiAbstract} name="Abstract" />
-    <LogoItem Icon={SiAdobe} name="Adobe" />
-    <LogoItem Icon={SiAirtable} name="Airtable" />
-    <LogoItem Icon={SiAmazon} name="Amazon" />
-    <LogoItem Icon={SiBox} name="Box" />
-    <LogoItem Icon={SiBytedance} name="Bytedance" />
-    <LogoItem Icon={SiChase} name="Chase" />
-    <LogoItem Icon={SiCloudbees} name="Cloudebees" />
+    {brandLogosPaths.map((path, index) => (
+      <LogoItem key={index} imagePath={path} name={`Logo ${index + 1}`} />
+    ))}
   </>
 );
 
 const LogoItemsBottom = () => (
   <>
-    <LogoItem Icon={SiBmw} name="BMW" />
-    <LogoItem Icon={SiBurton} name="Burton" />
-    <LogoItem Icon={SiBuildkite} name="Buildkite" />
-    <LogoItem Icon={SiCouchbase} name="Couchbase" />
-    <LogoItem Icon={SiDailymotion} name="Dailymotion" />
-    <LogoItem Icon={SiDeliveroo} name="deliveroo" />
-    <LogoItem Icon={SiEpicgames} name="Epic Games" />
-    <LogoItem Icon={SiGenius} name="Genius" />
-    <LogoItem Icon={SiGodaddy} name="GoDaddy" />
-    <LogoItem Icon={SiHeroku} name="Heroku" />
+    {brandLogosPaths.map((path, index) => (
+      <LogoItem key={index} imagePath={path} name={`Logo ${index + 1}`} />
+    ))}
   </>
 );
 

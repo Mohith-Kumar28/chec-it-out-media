@@ -1,133 +1,160 @@
 "use client";
-import { motion } from "framer-motion";
-import { useRef, useState } from "react";
-import { FiArrowRight } from "react-icons/fi";
-import { DisappearingFeatures } from "./disappearingFeatures";
+import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
+import { AiFillApple, AiFillFileImage } from "react-icons/ai";
+import { useRef } from "react";
 
 const Works = () => {
+  const targetRef = useRef<HTMLDivElement | null>(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+  });
+
   return (
-    <div id="works" className="px-4 md:px-8 py-28">
-      {/* <div className="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end md:px-8">
+    <>
+      {/* <Nav scrollYProgress={scrollYProgress} /> */}
+      <section ref={targetRef} className=" h-[350vh] mt-32">
+        <div className="h-screen sticky top-0 z-0 grid grid-cols-3 grid-rows-3 gap-4 p-4 overflow-hidden">
+          <Copy scrollYProgress={scrollYProgress} />
+          <Images scrollYProgress={scrollYProgress} />
+
+          <Circles />
+        </div>
+      </section>
+    </>
+  );
+};
+
+const Copy = ({
+  scrollYProgress,
+}: {
+  scrollYProgress: MotionValue<number>;
+}) => {
+  const copyScale = useTransform(scrollYProgress, [0, 0.75], [1, 0.5]);
+  const copyOpacity = useTransform(scrollYProgress, [0, 0.75], [1, 0]);
+  const copyY = useTransform(scrollYProgress, [0, 0.75], ["0%", "7.5%"]);
+
+  return (
+    <motion.div
+      style={{
+        scale: copyScale,
+        opacity: copyOpacity,
+        y: copyY,
+      }}
+      className="absolute px-8 w-full h-screen z-20 flex flex-col items-center justify-center"
+    >
+      <div className="mb-8 flex flex-col items-start text-center justify-between gap-4 md:flex-row md:items-end md:px-8">
         <h2 className="max-w-md text-gray-600 font-bold text-4xl  md:text-5xl">
           A sneak peak into
           <span className="text-primary"> our works</span>
         </h2>
-      </div> */}
-      <DisappearingFeatures />
-      {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 w-full max-w-6xl mx-auto">
-        <Card
-          heading="Dessange"
-          description=""
-          videoSrc="/works/videos/dessange.mp4"
-        />
-        <Card
-          heading="Juveria"
-          description=""
-          videoSrc="/works/videos/juveria.mp4"
-        />
-        <Card
-          heading="Beer Oota"
-          description=""
-          videoSrc="/works/videos/beerOota.mp4"
-        />
-        <Card heading="PNB" description="" videoSrc="/works/videos/pnb.mp4" />
-      </div> */}
-    </div>
-  );
-};
-
-const Card = ({
-  heading,
-  description,
-  videoSrc,
-}: {
-  heading: string;
-  description: string;
-  videoSrc: string;
-}) => {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null); // Create a ref for the video element
-
-  // Function to handle hover effect
-  const handleHover = () => {
-    if (videoRef.current) {
-      if (!isPlaying) {
-        videoRef.current.play(); // Play the video if it's not already playing
-      } else {
-        videoRef.current.pause(); // Pause the video if it's playing
-      }
-      setIsPlaying(!isPlaying); // Toggle the isPlaying state
-    }
-  };
-
-  return (
-    <motion.div
-      transition={{ staggerChildren: 0.035 }}
-      onHoverStart={() => {
-        videoRef?.current?.play(), setIsPlaying(true);
-      }} // Use the handleHover function on hover
-      onHoverEnd={() => {
-        videoRef?.current?.pause(), setIsPlaying(false);
-      }} // Use the handleHover function on hover
-      className="w-full h-[500px] bg-slate-300 overflow-hidden cursor-pointer group relative"
-    >
-      <div
-        className={`absolute inset-0 transition-opacity duration-500 ease-in-out `}
-      >
-        <div className="bg-black opacity-50"></div> {/* Black overlay */}
-      </div>
-      <video
-        ref={videoRef} // Attach the ref to the video element
-        // autoPlay
-        loop
-        muted
-        className={`absolute z-10 w-auto min-w-full min-h-full max-w-none ${
-          isPlaying ? "saturate-100" : "saturate-0"
-        } `}
-      >
-        <source src={videoSrc} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
-      {/* Rest of the component remains unchanged */}
-      <div className="p-4 relative z-20 h-full text-white group-hover:text-white transition-colors duration-500 flex flex-col justify-between">
-        <div className="w-full h-36 bg-gradient-to-t from-black -z-10 absolute bottom-0 left-0"></div>
-        <FiArrowRight className="text-3xl group-hover:-rotate-45 transition-transform duration-500 ml-auto" />
-        <div>
-          <h4>
-            {heading.split("").map((l, i) => (
-              <ShiftLetter letter={l} key={i} />
-            ))}
-          </h4>
-          <p>{description}</p>
-        </div>
       </div>
     </motion.div>
   );
 };
 
-const ShiftLetter = ({ letter }: { letter: string }) => {
+const Images = ({
+  scrollYProgress,
+}: {
+  scrollYProgress: MotionValue<number>;
+}) => {
+  const scale = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
+
+  const image1Offset = useTransform(scrollYProgress, [0, 1], ["-35%", "0%"]);
+
+  const image2OffsetX = useTransform(scrollYProgress, [0, 1], ["30%", "0%"]);
+  const image2OffsetY = useTransform(scrollYProgress, [0, 1], ["-30%", "0%"]);
+
+  const image3OffsetX = useTransform(scrollYProgress, [0, 1], ["-25%", "0%"]);
+  const image3OffsetY = useTransform(scrollYProgress, [0, 1], ["25%", "0%"]);
+
+  const image4OffsetX = useTransform(scrollYProgress, [0, 1], ["25%", "0%"]);
+  const image4OffsetY = useTransform(scrollYProgress, [0, 1], ["-145%", "0%"]);
+
+  const image5OffsetX = useTransform(scrollYProgress, [0, 1], ["-25%", "0%"]);
+  const image5OffsetY = useTransform(scrollYProgress, [0, 1], ["25%", "0%"]);
+
+  const image6OffsetX = useTransform(scrollYProgress, [0, 1], ["25%", "0%"]);
+  const image6OffsetY = useTransform(scrollYProgress, [0, 1], ["25%", "0%"]);
+
   return (
-    <div className="inline-block overflow-hidden h-[36px] font-semibold text-3xl">
-      <motion.span
-        className="flex flex-col min-w-[4px]"
+    <>
+      <motion.div
+        className="col-span-2 relative z-10"
         style={{
-          y: "0%",
+          backgroundImage: "url(/imgTrail/005.jpg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          scale,
+          x: image1Offset,
+          y: image1Offset,
         }}
-        variants={{
-          hover: {
-            y: "-50%",
-          },
+      />
+      <motion.div
+        className="row-span-2 relative z-10"
+        style={{
+          backgroundImage: "url(/imgTrail/010.jpg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          scale,
+          x: image2OffsetX,
+          y: image2OffsetY,
         }}
-        transition={{
-          duration: 0.5,
+      />
+
+      <motion.div
+        className="row-span-2 relative z-10"
+        style={{
+          backgroundImage: "url(/imgTrail/020.jpg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          scale,
+          x: image3OffsetX,
+          y: image3OffsetY,
         }}
-      >
-        <span>{letter}</span>
-        <span>{letter}</span>
-      </motion.span>
-    </div>
+      />
+      <motion.div
+        className="relative z-10"
+        style={{
+          backgroundImage: "url(/imgTrail/030.jpg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          scale,
+          x: image4OffsetX,
+          y: image4OffsetY,
+        }}
+      />
+
+      <motion.div
+        className="relative z-10"
+        style={{
+          backgroundImage: "url(/imgTrail/040.jpg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          scale,
+          x: image5OffsetX,
+          y: image5OffsetY,
+        }}
+      />
+      <motion.div
+        className="relative z-10"
+        style={{
+          backgroundImage: "url(/imgTrail/050.jpg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          scale,
+          x: image6OffsetX,
+          y: image6OffsetY,
+        }}
+      />
+    </>
   );
 };
+
+const Circles = () => (
+  <>
+    <div className="w-3/5 max-w-[850px] min-w-[400px] aspect-square border-[8px] border-slate-200 rounded-full absolute z-0 left-0 top-0 -translate-x-[50%] -translate-y-[50%]" />
+    <div className="w-1/2 max-w-[600px] min-w-[300px] aspect-square border-[8px] border-slate-200 rounded-full absolute z-0 right-0 bottom-0 translate-x-[50%] translate-y-[50%]" />
+  </>
+);
 
 export default Works;
