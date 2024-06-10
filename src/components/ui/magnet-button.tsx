@@ -93,9 +93,9 @@ const MagnetButton = () => {
           <textPath
             href="#circlePath"
             fill="black"
-            className="fill-black text-xl font-light uppercase opacity-0 transition-opacity duration-700 ease-out group-hover:opacity-100"
+            className="fill-black text-xl font-light tracking-wide uppercase opacity-0 transition-opacity duration-700 ease-out group-hover:opacity-100"
           >
-            You can write whatever text you want around this circle
+            Connect with us on WhatsApp to know more
           </textPath>
         </text>
       </motion.svg>
