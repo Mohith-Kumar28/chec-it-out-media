@@ -150,7 +150,7 @@ const AIButton = () => {
 };
 
 const Copy = ({ opacity }: { opacity: MotionValue }) => {
-  const words = ["Brands", "Memories", "Content", "Legacies"];
+  const words = ["Brands, ", "Memories, ", "Content, ", "Legacies, "];
   return (
     <MouseImageTrail
       renderImageBuffer={50}
