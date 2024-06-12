@@ -59,7 +59,7 @@ export const WhatWeOffer = () => {
         />
         <Item
           Icon={TbBrandApplePodcast} // Branding and Brand Management icon, assuming FaBrandFriends is suitable
-          title="Branding and Brand Management"
+          title="Branding & Brand Management"
           subtitle="Build and maintain a strong brand identity and reputation."
         />
         <Item
@@ -152,8 +152,8 @@ const Item = ({
 }) => {
   return (
     <div>
-      <h4 className="mb-1.5 text-gray-100 flex items-start text-lg font-medium md:text-xl">
-        <Icon className="mr-1.5 h-[26px] text-primary" />
+      <h4 className="mb-1.5 text-gray-100 flex md:flex-row flex-col items-start text-lg font-medium md:text-xl">
+        <Icon className="mr-1.5 mb-2 size-[26px] text-primary" />
         {title}
       </h4>
       <p className="text-sm text-zinc-400 md:text-base">{subtitle}</p>
