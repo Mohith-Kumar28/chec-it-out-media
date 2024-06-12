@@ -167,7 +167,7 @@ const Copy = ({ opacity }: { opacity: MotionValue }) => {
       >
         <AIButton />
 
-        <div className=" mx-auto backdrop-blur-xl bg-white/70 rounded-lg p-4  text-center text-5xl font-black md:text-7xl text-neutral-600 ">
+        <div className=" mx-auto backdrop-blur-xl bg-white/70 rounded-lg p-4  text-center text-3xl font-black md:text-7xl text-neutral-600 ">
           Building
           <FlipWords words={words} /> <br />
           with CheckItOutMedia
