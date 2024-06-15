@@ -133,7 +133,7 @@ const LinksContainer = ({
   setActive: Dispatch<SetStateAction<boolean>>;
 }) => {
   return (
-    <motion.div className="space-y-4 p-12 pl-4 md:pl-20">
+    <motion.div className="space-y-4 pl-20 pt-20">
       {LINKS.map((l, idx) => {
         return (
           <NavLink setActive={setActive} key={l.title} href={l.href} idx={idx}>
