@@ -173,7 +173,7 @@ const Copy = ({ opacity }: { opacity: MotionValue }) => {
       >
         <video
           autoPlay
-          // controls
+          controls
           muted
           loop
           className="absolute bottom-0 left-0 w-full h-full object-cover "
