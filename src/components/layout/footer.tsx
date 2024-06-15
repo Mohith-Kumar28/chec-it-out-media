@@ -97,9 +97,9 @@ const Footer = () => {
             </svg>
           </a>
         </span> */}
-        <div className="flex md:justify-end w-full ">
+        {/* <div className="flex md:justify-end w-full ">
           <Hiring />
-        </div>
+        </div> */}
       </div>
     </footer>
   );

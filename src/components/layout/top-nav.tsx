@@ -122,7 +122,7 @@ const LinksOverlay = ({
       {/* <nav className="fixed right-4 top-4 z-40 h-[calc(100vh_-_32px)] w-[calc(100%_-_32px)] overflow-hidden"> */}
       <Logo />
       <LinksContainer setActive={setActive} />
-      <FooterCTAs />
+      {/* <FooterCTAs /> */}
     </nav>
   );
 };
@@ -218,14 +218,14 @@ const HamburgerButton = ({
         initial={false}
         animate={active ? "open" : "closed"}
         variants={UNDERLAY_VARIANTS}
-        style={{ top: 16, right: 16 }}
-        className="fixed z-30 rounded-xl bg-gradient-to-br from-primary to-primary shadow-lg shadow-orange-800/20"
+        style={{ top: 0, right: 0 }}
+        className="fixed z-30 rounded-bl-xl bg-gradient-to-br from-primary to-primary shadow-lg shadow-orange-800/20"
       />
       <motion.button
         initial={false}
         animate={active ? "open" : "closed"}
         onClick={() => setActive((pv) => !pv)}
-        className={`group fixed right-4 top-4 z-50 h-20 w-20 bg-white/0 transition-all hover:bg-white/20 ${
+        className={`group fixed right-2 top-2 z-50 size-16 bg-white/0 transition-all hover:bg-white/20 ${
           active ? "rounded-bl-xl rounded-tr-xl" : "rounded-xl"
         }`}
       >
@@ -244,37 +244,42 @@ const HamburgerButton = ({
           className="absolute block h-1 w-5 bg-white"
           style={{ x: "-50%", y: "50%" }}
         />
-        <SocialLinks />
+        <SocialLinks active={active} />
       </motion.button>
     </>
   );
 };
 
-const SocialLinks = () => {
+const SocialLinks = ({ active }: { active: boolean }) => {
   return (
-    <nav className=" absolute right-2 top-20 rounded-b-sm z-50 w-fit bg-zinc-950  p-4 flex flex-col items-center gap-2">
-      <Link
-        target="_blank"
-        className="hover:bg-gray-500 rounded-sm"
-        href="https://www.instagram.com/checkitoutmedia.in?igsh=MWtkbjRsZzBxOWZqZQ==
+    <nav className=" fixed right-0 top-20 rounded-bl-sm z-50 w-fit bg-green-500  p-4 flex flex-col items-center gap-2">
+      {active && (
+        <>
+          {" "}
+          <Link
+            target="_blank"
+            className="hover:bg-gray-500 rounded-sm"
+            href="https://www.instagram.com/checkitoutmedia.in?igsh=MWtkbjRsZzBxOWZqZQ==
 "
-      >
-        <PiInstagramLogo className="text-3xl text-white" />
-      </Link>
-      <Link
-        target="_blank"
-        className="hover:bg-gray-500 rounded-sm"
-        href="https://www.facebook.com/share/X86VuMYbp4bzJTQX/?mibextid=LQQJ4d"
-      >
-        <PiFacebookLogo className="text-3xl text-white" />
-      </Link>{" "}
-      <Link
-        target="_blank"
-        className="hover:bg-gray-500 rounded-sm"
-        href="https://www.linkedin.com/company/check-it-out-media/"
-      >
-        <PiLinkedinLogo className="text-3xl text-white" />
-      </Link>{" "}
+          >
+            <PiInstagramLogo className="text-4xl text-white" />
+          </Link>
+          <Link
+            target="_blank"
+            className="hover:bg-gray-500 rounded-sm"
+            href="https://www.facebook.com/share/X86VuMYbp4bzJTQX/?mibextid=LQQJ4d"
+          >
+            <PiFacebookLogo className="text-3xl text-white" />
+          </Link>{" "}
+          <Link
+            target="_blank"
+            className="hover:bg-gray-500 rounded-sm"
+            href="https://www.linkedin.com/company/check-it-out-media/"
+          >
+            <PiLinkedinLogo className="text-3xl text-white" />
+          </Link>{" "}
+        </>
+      )}
       <Link
         target="_blank"
         className="hover:bg-gray-500 rounded-sm"
@@ -349,6 +354,10 @@ const LINKS = [
   {
     title: "contact",
     href: "#contact",
+  },
+  {
+    title: "careers",
+    href: "#",
   },
 ];
 

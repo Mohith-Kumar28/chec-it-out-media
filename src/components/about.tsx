@@ -106,9 +106,9 @@ const Content = ({
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
         >
-          <span className="rounded-full bg-primary px-2 py-1.5 text-xs font-medium text-white">
+          {/* <span className="rounded-full bg-primary px-2 py-1.5 text-xs font-medium text-white">
             {featureInView.callout}
-          </span>
+          </span> */}
           <p className="my-3 text-5xl font-bold">{featureInView.title}</p>
           <p className="text-slate-500 text-lg">{featureInView.description}</p>
         </motion.div>

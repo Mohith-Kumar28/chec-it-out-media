@@ -15,12 +15,17 @@ import {
   FaEdit,
   FaEnvelopeOpenText,
   FaFacebookSquare,
+  FaFilm,
   FaPaintBrush,
   FaPenAlt,
   FaRegFileAlt,
   FaUserGraduate,
 } from "react-icons/fa";
 import { TbBrandApplePodcast } from "react-icons/tb";
+import { IoDocumentText } from "react-icons/io5";
+import { MdEditSquare, MdEmail, MdManageAccounts } from "react-icons/md";
+import { PiFilmReelFill } from "react-icons/pi";
+import { SiGooglecampaignmanager360 } from "react-icons/si";
 
 export const WhatWeOffer = () => {
   return (
@@ -33,17 +38,17 @@ export const WhatWeOffer = () => {
       </div>
       <div className="relative z-10 grid grid-cols-2 gap-9 px-3 md:grid-cols-3 md:gap-12 md:px-6">
         <Item
-          Icon={FiFilm} // Assuming FiFilm represents Media Production
+          Icon={PiFilmReelFill} // Assuming FiFilm represents Media Production
           title="Media Production"
           subtitle="Create compelling video and audio content to engage your audience."
         />
         <Item
-          Icon={FaRegFileAlt} // Content Creation icon, assuming FaRegFileAlt is suitable
+          Icon={IoDocumentText} // Content Creation icon, assuming FaRegFileAlt is suitable
           title="Content Creation"
           subtitle="Develop engaging written, visual, and multimedia content strategies."
         />
         <Item
-          Icon={FaEdit} // Content Editing icon, assuming FaEdit is suitable
+          Icon={MdEditSquare} // Content Editing icon, assuming FaEdit is suitable
           title="Content Editing"
           subtitle="Refine and polish your content to ensure clarity and impact."
         />
@@ -58,12 +63,12 @@ export const WhatWeOffer = () => {
           subtitle="Leverage influencers to reach and engage your target audience."
         />
         <Item
-          Icon={TbBrandApplePodcast} // Branding and Brand Management icon, assuming FaBrandFriends is suitable
+          Icon={SiGooglecampaignmanager360} // Branding and Brand Management icon, assuming FaBrandFriends is suitable
           title="Branding & Brand Management"
           subtitle="Build and maintain a strong brand identity and reputation."
         />
         <Item
-          Icon={FaEnvelopeOpenText} // Email Marketing icon, assuming FaEnvelopeOpenText is suitable
+          Icon={MdEmail} // Email Marketing icon, assuming FaEnvelopeOpenText is suitable
           title="Email Marketing"
           subtitle="Engage customers through personalized email campaigns."
         />

@@ -48,7 +48,10 @@ const Hero = () => {
   const logoScale = useTransform(scrollYProgress, [0, 0.8, 1], [0, 0, 1]);
 
   return (
-    <div ref={targetRef} className="relative z-0 h-[300vh] bg-neutral-200">
+    <div
+      ref={targetRef}
+      className="relative z-0 h-[150vh] md:h-[300vh] bg-neutral-200"
+    >
       <div className="sticky top-0 h-screen bg-white">
         <Copy opacity={opacity} />
         <Trippy rotate={rotate} top={top} scale={scale} />
@@ -92,7 +95,7 @@ const Trippy = ({
   return (
     <motion.div
       style={{ top }}
-      className="absolute bottom-0 left-0 right-0 overflow-hidden bg-black"
+      className="absolute  bottom-0 left-0 right-0 overflow-hidden bg-black"
     >
       {generateSections(0, "#FE6E4A", scale, rotate)}
     </motion.div>
@@ -127,14 +130,14 @@ const Section = ({
 
 const AIButton = () => {
   return (
-    <button className="text-white font-medium px-4 py-2 rounded-full overflow-hidden relative transition-transform hover:scale-105 active:scale-95">
-      <span className="relative z-10 flex align-middle justify-center gap-2">
-        Curious to know more about our work? Scroll down to check it out
+    <button className="text-white font-medium px-4 py-2 rounded-full overflow-hidden relative transition-transform hover:scale-105 active:scale-95 ">
+      <span className="relative z-10  align-middle justify-center gap-2 hidden md:flex">
+        [ Scroll down to Check It Out ]
         <div className="flex flex-col justify-center">
           <RiScrollToBottomFill className="text-2xl text-white" />
         </div>
       </span>
-      <motion.div
+      {/* <motion.div
         initial={{ left: 0 }}
         animate={{ left: "-300%" }}
         transition={{
@@ -144,36 +147,52 @@ const AIButton = () => {
           ease: "linear",
         }}
         className="bg-[linear-gradient(to_right,#8f14e6,#e614dc,#e61453,#e68414,#e6e614)] absolute z-0 inset-0 w-[400%]"
-      ></motion.div>
+      ></motion.div> */}
     </button>
   );
 };
 
 const Copy = ({ opacity }: { opacity: MotionValue }) => {
-  const words = ["Brands, ", "Memories, ", "Content, ", "Legacies, "];
+  const words = ["Brands", "Memories", "Content", "Legacies"];
+  const videoSrc = "/videos/heroBgMobile.mp4";
+
   return (
-    <MouseImageTrail
-      renderImageBuffer={50}
-      rotationRange={25}
+    <>
+      {/* <MouseImageTrail
+    renderImageBuffer={50}
+    rotationRange={25}
       images={Array.from(
-        { length: 50 },
-        (_, i) => `/imgTrail/${String(i + 1).padStart(3, "0")}.jpg`
-      )}
-    >
+      { length: 50 },
+      (_, i) => `/imgTrail/${String(i + 1).padStart(3, "0")}.jpg`
+   )}
+  > */}
       <motion.div
         style={{ opacity }}
         // Padding top + 56px to accommodate for navbar height
-        className="relative z-[99999] flex h-4/5 flex-col items-center justify-center gap-4 overflow-hidden  p-4 pt-[calc(56px_+_16px)] text-black"
+        className="relative z-[99999] flex h-4/5 flex-col items-center justify-end gap-4 overflow-hidden  pb-5 px-4 pt-10 text-black bg-black"
       >
-        <AIButton />
+        <video
+          autoPlay
+          // controls
+          muted
+          loop
+          className="absolute bottom-0 left-0 w-full h-full object-cover "
+          // style={{ zIndex: 50 }}
+        >
+          <source src={videoSrc} type="video/mp4" />
+        </video>
+        <div className="bg-gradient-to-t from-black  z-0 h-56 w-full absolute bottom-0 left-0"></div>
 
-        <div className=" mx-auto backdrop-blur-xl bg-white/70 rounded-lg p-4  text-center text-3xl font-black md:text-7xl text-neutral-600 ">
+        <div className=" mx-auto backdrop-blur-3xl bg-white/80 rounded-lg p-4  text-center text-3xl font-black md:text-5xl text-neutral-600 ">
           Building
-          <FlipWords words={words} /> <br />
-          with CheckItOutMedia
+          <FlipWords words={words} />
+          {/* <br /> 
+          with CheckItOutMedia */}
         </div>
+        <AIButton />
       </motion.div>
-    </MouseImageTrail>
+      {/* </MouseImageTrail>  */}
+    </>
   );
 };
 

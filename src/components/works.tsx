@@ -79,29 +79,72 @@ const Images = ({
   return (
     <>
       <motion.div
-        className="col-span-2 relative z-10"
+        className="relative z-10"
         style={{
-          backgroundImage: "url(/imgTrail/005.jpg)",
+          backgroundImage: "url(/imgTrail/040.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           scale,
-          x: image1Offset,
-          y: image1Offset,
+          x: image5OffsetX,
+          y: image5OffsetY,
+        }}
+      />
+      <motion.div
+        className="relative z-10"
+        style={{
+          backgroundImage: "url(/imgTrail/050.jpg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          scale,
+          x: image6OffsetX,
+          y: image6OffsetY,
         }}
       />
       <motion.div
         className="row-span-2 relative z-10"
         style={{
-          backgroundImage: "url(/imgTrail/010.jpg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          position: "relative",
           scale,
           x: image2OffsetX,
           y: image2OffsetY,
         }}
-      />
+      >
+        <video
+          autoPlay
+          height={100}
+          width={100}
+          muted
+          loop
+          className="absolute w-full h-full object-cover z-0"
+          style={{ zIndex: -1 }}
+        >
+          <source src="/videos/heroBgMobile.mp4" type="video/mp4" />
+        </video>
+      </motion.div>
 
       <motion.div
+        className="row-span-2 relative z-10"
+        style={{
+          position: "relative",
+          scale,
+          x: image3OffsetX,
+          y: image3OffsetY,
+        }}
+      >
+        <video
+          autoPlay
+          height={100}
+          width={100}
+          muted
+          loop
+          className="absolute w-full h-full object-cover z-0"
+          style={{ zIndex: -1 }}
+        >
+          <source src="/videos/dessange.mp4" type="video/mp4" />
+        </video>
+      </motion.div>
+
+      {/* <motion.div
         className="row-span-2 relative z-10"
         style={{
           backgroundImage: "url(/imgTrail/020.jpg)",
@@ -111,7 +154,7 @@ const Images = ({
           x: image3OffsetX,
           y: image3OffsetY,
         }}
-      />
+      /> */}
       <motion.div
         className="relative z-10"
         style={{
@@ -138,14 +181,24 @@ const Images = ({
       <motion.div
         className="relative z-10"
         style={{
-          backgroundImage: "url(/imgTrail/050.jpg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          position: "relative",
           scale,
           x: image6OffsetX,
           y: image6OffsetY,
         }}
-      />
+      >
+        <video
+          autoPlay
+          height={100}
+          width={100}
+          muted
+          loop
+          className="absolute w-full h-full object-cover z-0"
+          style={{ zIndex: -1 }}
+        >
+          <source src="/videos/hublot.mp4" type="video/mp4" />
+        </video>
+      </motion.div>
     </>
   );
 };
