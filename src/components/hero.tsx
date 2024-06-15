@@ -183,7 +183,7 @@ const Copy = ({ opacity }: { opacity: MotionValue }) => {
         </video>
         <div className="bg-gradient-to-t from-black  z-0 h-56 w-full absolute bottom-0 left-0"></div>
 
-        <div className=" mx-auto backdrop-blur-3xl bg-white/80 rounded-lg p-4  text-center text-3xl font-black md:text-5xl text-neutral-600 ">
+        <div className=" mx-auto backdrop-blur-3xl z-40 relative  bg-white/80 rounded-lg p-4  text-center text-3xl font-black md:text-5xl text-neutral-600 ">
           Building
           <FlipWords words={words} />
           {/* <br /> 
