@@ -153,7 +153,7 @@ const AIButton = () => {
 };
 
 const Copy = ({ opacity }: { opacity: MotionValue }) => {
-  const words = ["Brands", "Memories", "Content", "Legacies"];
+  const words = ["Brands", "Memories", "Legacies"];
   const videoSrc = "/videos/heroBgMobile.mp4";
 
   return (
