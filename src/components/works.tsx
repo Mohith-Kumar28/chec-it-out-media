@@ -81,7 +81,7 @@ const Images = ({
       <motion.div
         className="relative z-10"
         style={{
-          backgroundImage: "url(/imgTrail/040.jpg)",
+          backgroundImage: "url(/works/topLeft.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           scale,
@@ -92,7 +92,7 @@ const Images = ({
       <motion.div
         className="relative z-10"
         style={{
-          backgroundImage: "url(/imgTrail/050.jpg)",
+          backgroundImage: "url(/works/topCenter.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           scale,
@@ -118,7 +118,7 @@ const Images = ({
           className="absolute w-full h-full object-cover z-0"
           style={{ zIndex: -1 }}
         >
-          <source src="/videos/heroBgMobile.mp4" type="video/mp4" />
+          <source src="/videos/premier.mp4" type="video/mp4" />
         </video>
       </motion.div>
 
@@ -158,7 +158,7 @@ const Images = ({
       <motion.div
         className="relative z-10"
         style={{
-          backgroundImage: "url(/imgTrail/030.jpg)",
+          backgroundImage: "url(/works/centerCenter.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           scale,
@@ -170,7 +170,7 @@ const Images = ({
       <motion.div
         className="relative z-10"
         style={{
-          backgroundImage: "url(/imgTrail/040.jpg)",
+          backgroundImage: "url(/works/bottomCenter.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           scale,
