@@ -118,7 +118,7 @@ const Images = ({
           className="absolute w-full h-full object-cover z-0"
           style={{ zIndex: -1 }}
         >
-          <source src="/videos/premier.mp4" type="video/mp4" />
+          <source src="/works/topRight.mp4" type="video/mp4" />
         </video>
       </motion.div>
 
@@ -140,7 +140,7 @@ const Images = ({
           className="absolute w-full h-full object-cover z-0"
           style={{ zIndex: -1 }}
         >
-          <source src="/videos/dessange.mp4" type="video/mp4" />
+          <source src="/works/bottomLeft.mp4" type="video/mp4" />
         </video>
       </motion.div>
 
@@ -196,7 +196,7 @@ const Images = ({
           className="absolute w-full h-full object-cover z-0"
           style={{ zIndex: -1 }}
         >
-          <source src="/videos/hublot.mp4" type="video/mp4" />
+          <source src="/works/bottomRight.mp4" type="video/mp4" />
         </video>
       </motion.div>
     </>
