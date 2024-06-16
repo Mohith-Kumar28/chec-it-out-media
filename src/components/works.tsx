@@ -13,7 +13,7 @@ const Works = () => {
     <>
       {/* <Nav scrollYProgress={scrollYProgress} /> */}
       <section ref={targetRef} className=" h-[350vh] mt-32">
-        <div className="h-screen sticky top-0 z-0 grid grid-cols-3 grid-rows-3 gap-4 p-4 overflow-hidden">
+        <div className="h-[80vh] pt-44 md:h-screen sticky top-0 z-0 grid grid-cols-3 grid-rows-3 gap-4 p-4 overflow-hidden">
           <Copy scrollYProgress={scrollYProgress} />
           <Images scrollYProgress={scrollYProgress} />
 
