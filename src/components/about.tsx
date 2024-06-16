@@ -178,7 +178,7 @@ const features: FeatureType[] = [
     id: 1,
     callout: "About Title 1",
     title: "A LITTLE ABOUT US",
-    imgUrl: "/imgTrail/035.jpg",
+    imgUrl: "/works/about1.jpg",
     description:
       "At Check It Out Media there is usually a collision of creativity and strategy and then BOOM -  we bring your brand to life. We have had the pleasure of collaborating with a diverse range of clients, from innovative startups to seasoned businesses. Our content isn't just trendy—it's a masterclass in storytelling. Our focus is to tell the story our clients want to convey to their audience. From fun trending reels and memes to intensely engaging pieces that captivate your audience, Check It Out Media does it all!  ",
     contentPosition: "r",
