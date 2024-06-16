@@ -151,11 +151,11 @@ const AboutFeature = ({ featureInView }: { featureInView: FeatureType }) => {
       {/* <img src={featureInView.imgUrl} alt="" /> */}
       <Image
         alt="about"
-        layout="fill"
+        layout="fit"
         objectFit="cover"
         src={featureInView.imgUrl}
-        // height={600}
-        // width={600}
+        height={600}
+        width={600}
       />
     </div>
   );
