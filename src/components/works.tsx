@@ -115,7 +115,7 @@ const Images = ({
           width={100}
           muted
           loop
-          className="absolute w-full h-full object-cover z-0"
+          className="absolute  w-full h-full object-cover z-0"
           style={{ zIndex: -1 }}
         >
           <source src="/works/topRight.mp4" type="video/mp4" />
