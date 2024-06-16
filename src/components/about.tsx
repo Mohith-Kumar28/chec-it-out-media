@@ -127,7 +127,7 @@ const Content = ({
 
 const AboutFeature = ({ featureInView }: { featureInView: FeatureType }) => {
   return (
-    <div className="relative h-[80vh] w-full rounded-xl  shadow-xl">
+    <div className="relative h-[60vh] w-full rounded-xl  shadow-xl">
       {/* <div className="flex w-full gap-1.5 rounded-t-xl bg-slate-900 p-3">
         <div className="h-3 w-3 rounded-full bg-red-500" />
         <div className="h-3 w-3 rounded-full bg-yellow-500" />
@@ -150,7 +150,7 @@ const AboutFeature = ({ featureInView }: { featureInView: FeatureType }) => {
 
       {/* <img src={featureInView.imgUrl} alt="" /> */}
       <Image
-        alt="check-it-out-media-logo.svg"
+        alt="about"
         layout="fill"
         objectFit="cover"
         src={featureInView.imgUrl}
@@ -188,7 +188,7 @@ const features: FeatureType[] = [
     id: 2,
     callout: "About Title 2",
     title: "BRANDS WE FOSTER",
-    imgUrl: "/imgTrail/064.jpg",
+    imgUrl: "/works/about2.jpg",
     description:
       "Our eclectic client roster includes Karnatic, Pegs N Bottles, Spaine, Dessange and many more. Each brand has its own unique groove, and we dance to their tunes with customized strategies. At Check It Out Media, we believe in making every piece of content distinctive, ensuring a lasting impression and a memorable brand presence. After all a brand is remembered by the story it tells. ",
     contentPosition: "l",

@@ -111,8 +111,8 @@ const Images = ({
       >
         <video
           autoPlay
-          height={100}
-          width={100}
+          // height={100}
+          // width={100}
           muted
           loop
           className="absolute  w-full h-full object-cover z-0"
