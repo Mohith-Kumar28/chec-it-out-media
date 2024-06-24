@@ -12,7 +12,7 @@ const Works = () => {
   return (
     <>
       {/* <Nav scrollYProgress={scrollYProgress} /> */}
-      <section ref={targetRef} className=" h-[350vh] mt-32">
+      <section ref={targetRef} id="works" className=" h-[350vh] mt-32">
         <div className="h-[80vh] pt-44 md:h-screen sticky top-0 z-0 grid grid-cols-3 grid-rows-3 gap-4 p-4 overflow-hidden">
           <Copy scrollYProgress={scrollYProgress} />
           <Images scrollYProgress={scrollYProgress} />
@@ -45,7 +45,7 @@ const Copy = ({
       <div className="mb-8 flex flex-col items-start text-center justify-between gap-4 md:flex-row md:items-end md:px-8">
         <h2 className="max-w-md text-gray-600 font-bold text-4xl  md:text-5xl">
           A sneak peak into
-          <span className="text-primary"> our works</span>
+          <span className="text-primary"> our work</span>
         </h2>
       </div>
     </motion.div>

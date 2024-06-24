@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   useMotionValueEvent,
   useTransform,
@@ -130,9 +130,9 @@ const Section = ({
 
 const AIButton = () => {
   return (
-    <button className="text-white font-medium px-4 py-2 rounded-full overflow-hidden relative transition-transform hover:scale-105 active:scale-95 ">
+    <button className="text-white font-medium px-4 pb-2 rounded-full overflow-hidden relative transition-transform cursor-default hover:scale-105 active:scale-95 ">
       <span className="relative z-10  align-middle justify-center gap-2 hidden md:flex">
-        [ Scroll down to Check It Out ]
+        [ Curious to know more about our work? Scroll down to check it out ]
         <div className="flex flex-col justify-center">
           <RiScrollToBottomFill className="text-2xl text-white" />
         </div>
@@ -181,11 +181,12 @@ const Copy = ({ opacity }: { opacity: MotionValue }) => {
         >
           <source src={videoSrc} type="video/mp4" />
         </video>
-        <div className="bg-gradient-to-t from-black  z-0 h-56 w-full absolute bottom-0 left-0"></div>
+        <div className="bg-gradient-to-t from-black  z-0 h-72 w-full absolute bottom-0 left-0"></div>
 
-        <div className=" mx-auto backdrop-blur-3xl z-40 relative  bg-white/80 rounded-lg p-4  text-center text-3xl font-black md:text-5xl text-neutral-600 ">
+        <div className=" mx-auto  z-40 relative   rounded-lg p-1  text-center text-3xl font-black md:text-5xl text-neutral-50 ">
           Building
-          <FlipWords words={words} />
+          {/* <FlipWords words={words} /> */}
+          <AnimatedText phrases={words} />
           {/* <br /> 
           with CheckItOutMedia */}
         </div>
@@ -193,6 +194,51 @@ const Copy = ({ opacity }: { opacity: MotionValue }) => {
       </motion.div>
       {/* </MouseImageTrail>  */}
     </>
+  );
+};
+
+const AnimatedText = ({ phrases }: { phrases: string[] }) => {
+  const ONE_SECOND = 1000;
+  const WAIT_TIME = ONE_SECOND * 3;
+  const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    const intervalRef = setInterval(() => {
+      setActive((pv) => (pv + 1) % phrases.length);
+    }, WAIT_TIME);
+
+    return () => clearInterval(intervalRef);
+  }, [phrases]);
+
+  return (
+    <div className="relative mb-14 mt-2 w-full">
+      {phrases.map((phrase) => {
+        const isActive = phrases[active] === phrase;
+        return (
+          <motion.div
+            key={phrase}
+            initial={false}
+            animate={isActive ? "active" : "inactive"}
+            style={{
+              x: "-50%",
+            }}
+            variants={{
+              active: {
+                opacity: 1,
+                scale: 1,
+              },
+              inactive: {
+                opacity: 0,
+                scale: 0,
+              },
+            }}
+            className="absolute left-1/2 top-0 w-full text-primary"
+          >
+            {phrase}
+          </motion.div>
+        );
+      })}
+    </div>
   );
 };
 

@@ -25,7 +25,7 @@ export function Contact() {
             }}
             className="font-bold text-4xl   md:text-5xl px-4  text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-left mx-auto "
           >
-            Connect us anytime through
+            Contact us anytime via
             <br />
             <Highlight className="text-black dark:text-white">
               Whats App

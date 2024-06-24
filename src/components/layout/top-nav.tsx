@@ -252,7 +252,7 @@ const HamburgerButton = ({
 
 const SocialLinks = ({ active }: { active: boolean }) => {
   return (
-    <nav className=" fixed right-0 top-20 rounded-bl-sm z-50 w-fit bg-green-500  p-4 flex flex-col items-center gap-2">
+    <nav className=" fixed right-0 top-20 rounded-bl-sm z-50 w-fit bg-black  p-3 flex flex-col items-center gap-3">
       {active && (
         <>
           {" "}
@@ -280,13 +280,15 @@ const SocialLinks = ({ active }: { active: boolean }) => {
           </Link>{" "}
         </>
       )}
-      <Link
-        target="_blank"
-        className="hover:bg-gray-500 rounded-sm"
-        href="https://wa.me/+919611544337"
-      >
-        <PiWhatsappLogo className="text-3xl text-white" />
-      </Link>
+      <div className="bg-green-500 p-2 rounded-full">
+        <Link
+          target="_blank"
+          className="hover:bg-gray-500  rounded-sm"
+          href="https://wa.me/+919611544337"
+        >
+          <PiWhatsappLogo className="text-3xl text-white" />
+        </Link>
+      </div>
     </nav>
   );
 };
@@ -348,7 +350,7 @@ const LINKS = [
     href: "#about",
   },
   {
-    title: "works",
+    title: "work",
     href: "#works",
   },
   {

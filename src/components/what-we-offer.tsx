@@ -33,7 +33,7 @@ export const WhatWeOffer = () => {
       <div className="mb-20 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end md:px-8">
         <h2 className="max-w-lg text-gray-600 font-bold text-4xl  md:text-5xl">
           What can we do for
-          <span className="text-primary"> Your brand</span>
+          <span className="text-primary"> Your brand?</span>
         </h2>
       </div>
       <div className="relative z-10 grid grid-cols-2 gap-9 px-3 md:grid-cols-3 md:gap-12 md:px-6">
