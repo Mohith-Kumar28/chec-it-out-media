@@ -2,6 +2,7 @@
 import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
 import { AiFillApple, AiFillFileImage } from "react-icons/ai";
 import { useRef } from "react";
+import Image from "next/image";
 
 const Works = () => {
   const targetRef = useRef<HTMLDivElement | null>(null);
@@ -81,25 +82,37 @@ const Images = ({
       <motion.div
         className="relative z-10"
         style={{
-          backgroundImage: "url(/works/topLeft.jpg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          position: "relative",
           scale,
           x: image5OffsetX,
           y: image5OffsetY,
         }}
-      />
+      >
+        <Image
+          src="/works/topLeft.jpg"
+          alt="Bottom Center"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+        />
+      </motion.div>
       <motion.div
         className="relative z-10"
         style={{
-          backgroundImage: "url(/works/topCenter.jpg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          position: "relative",
           scale,
           x: image6OffsetX,
           y: image6OffsetY,
         }}
-      />
+      >
+        <Image
+          src="/works/topCenter.jpg"
+          alt="Bottom Center"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+        />
+      </motion.div>
       <motion.div
         className="row-span-2 relative z-10"
         style={{
@@ -171,29 +184,42 @@ const Images = ({
           y: image3OffsetY,
         }}
       /> */}
-      <motion.div
-        className="relative z-10"
-        style={{
-          backgroundImage: "url(/works/centerCenter.jpg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          scale,
-          x: image4OffsetX,
-          y: image4OffsetY,
-        }}
-      />
 
       <motion.div
         className="relative z-10"
         style={{
-          backgroundImage: "url(/works/bottomCenter.jpg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          position: "relative",
+          scale,
+          x: image4OffsetX,
+          y: image4OffsetY,
+        }}
+      >
+        <Image
+          src="/works/centerCenter.jpg"
+          alt="Center Center"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+        />
+      </motion.div>
+
+      <motion.div
+        className="relative z-10"
+        style={{
+          position: "relative",
           scale,
           x: image5OffsetX,
           y: image5OffsetY,
         }}
-      />
+      >
+        <Image
+          src="/works/bottomCenter.jpg"
+          alt="Bottom Center"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+        />
+      </motion.div>
       <motion.div
         className="relative z-10"
         style={{
