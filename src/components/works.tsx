@@ -124,7 +124,7 @@ const Images = ({
       >
         <iframe
           className="w-full h-full object-cover z-0"
-          src="https://www.youtube.com/embed/se6Vh4KDQzk?si=E9UEMvifO3LF7XwS&amp;controls=0&autoplay=1&mute=1&loop=1"
+          src="https://www.youtube.com/embed/se6Vh4KDQzk?si=E9UEMvifO3LF7XwS&amp;controls=0&autoplay=1&mute=1&loop=1&playlist=se6Vh4KDQzk"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
@@ -154,7 +154,7 @@ const Images = ({
       >
         <iframe
           className="w-full h-full object-cover z-0"
-          src="https://www.youtube.com/embed/sqW1SvTrX0s?si=VkitthrzbBDuxFQJ&amp;controls=0&autoplay=1&mute=1&loop=1"
+          src="https://www.youtube.com/embed/sqW1SvTrX0s?si=VkitthrzbBDuxFQJ&amp;controls=0&autoplay=1&mute=1&loop=1&playlist=sqW1SvTrX0s"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
@@ -231,7 +231,7 @@ const Images = ({
       >
         <iframe
           className="w-full h-full object-cover z-0"
-          src="https://www.youtube.com/embed/XPPbrEOTm0o?si=EwN0c1zGkzcmRDKB&amp;controls=0&autoplay=1&mute=1&loop=1"
+          src="https://www.youtube.com/embed/XPPbrEOTm0o?si=EwN0c1zGkzcmRDKB&amp;controls=0&autoplay=1&mute=1&loop=1&playlist=XPPbrEOTm0o"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
