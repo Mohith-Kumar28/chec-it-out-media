@@ -81,7 +81,7 @@ const TranslateWrapper = ({
 
 const LogoItem = ({ imagePath, name }: { imagePath: string; name: string }) => {
   return (
-    <div className=" size-28 mx-8 flex justify-center align-middle ">
+    <div className="h-28 w-28 mx-8 flex justify-center align-middle ">
       <Image
         src={imagePath}
         alt={name}

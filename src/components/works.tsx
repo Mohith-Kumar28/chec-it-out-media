@@ -109,7 +109,15 @@ const Images = ({
           y: image2OffsetY,
         }}
       >
-        <video
+        <iframe
+          className="w-full h-full object-cover z-0"
+          src="https://www.youtube.com/embed/se6Vh4KDQzk?si=E9UEMvifO3LF7XwS&amp;controls=0&autoplay=1&mute=1&loop=1"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        ></iframe>
+        {/* <video
           autoPlay
           // height={100}
           // width={100}
@@ -119,7 +127,7 @@ const Images = ({
           style={{ zIndex: -1 }}
         >
           <source src="/works/premier.mp4" type="video/mp4" />
-        </video>
+        </video> */}
       </motion.div>
 
       <motion.div
@@ -131,7 +139,15 @@ const Images = ({
           y: image3OffsetY,
         }}
       >
-        <video
+        <iframe
+          className="w-full h-full object-cover z-0"
+          src="https://www.youtube.com/embed/sqW1SvTrX0s?si=VkitthrzbBDuxFQJ&amp;controls=0&autoplay=1&mute=1&loop=1"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        ></iframe>
+        {/* <video
           autoPlay
           height={100}
           width={100}
@@ -141,7 +157,7 @@ const Images = ({
           style={{ zIndex: -1 }}
         >
           <source src="/works/bottomLeft.mp4" type="video/mp4" />
-        </video>
+        </video> */}
       </motion.div>
 
       {/* <motion.div
@@ -187,7 +203,15 @@ const Images = ({
           y: image6OffsetY,
         }}
       >
-        <video
+        <iframe
+          className="w-full h-full object-cover z-0"
+          src="https://www.youtube.com/embed/XPPbrEOTm0o?si=EwN0c1zGkzcmRDKB&amp;controls=0&autoplay=1&mute=1&loop=1"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        ></iframe>
+        {/* <video
           autoPlay
           height={100}
           width={100}
@@ -197,7 +221,7 @@ const Images = ({
           style={{ zIndex: -1 }}
         >
           <source src="/works/bottomRight.mp4" type="video/mp4" />
-        </video>
+        </video> */}
       </motion.div>
     </>
   );
