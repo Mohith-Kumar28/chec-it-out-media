@@ -193,7 +193,7 @@ const Copy = ({ opacity }: { opacity: MotionValue }) => {
         </video> */}
         <div className="bg-gradient-to-t from-black  z-0 h-72 w-full absolute bottom-0 left-0"></div>
 
-        <div className=" mx-auto  z-40 relative   rounded-lg p-1  text-center text-3xl font-black md:text-5xl text-neutral-50 ">
+        <div className="  flex gap-2 -mb-12 md:mb-0 -ml-[30vw] md:-ml-[20vw] lg:-ml-[14vw]   z-40 relative   rounded-lg p-1  text-center text-3xl font-black md:text-5xl text-neutral-50 ">
           Building
           {/* <FlipWords words={words} /> */}
           <AnimatedText phrases={words} />
@@ -221,7 +221,7 @@ const AnimatedText = ({ phrases }: { phrases: string[] }) => {
   }, [phrases]);
 
   return (
-    <div className="relative mb-14 mt-2 w-full">
+    <div className="relative mb-14 mt-0 w-full">
       {phrases.map((phrase) => {
         const isActive = phrases[active] === phrase;
         return (
