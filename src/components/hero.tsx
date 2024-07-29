@@ -172,8 +172,8 @@ const Copy = ({ opacity }: { opacity: MotionValue }) => {
         className="relative z-[99999] flex h-4/5 flex-col items-center justify-end gap-4 overflow-hidden  pb-5 px-4 pt-10 text-black bg-black"
       >
         <iframe
-          className="absolute -bottom-[100vh] left-0 w-full h-[300vh] object-cover"
-          src="https://www.youtube.com/embed//k1NA_lPIqpA?si=7BcyIuD3y5MKlG&amp;controls=0&autoplay=1&mute=1&loop=1&playlist=k1NA_lPIqpA"
+          className="w-full h-full"
+          src="https://www.youtube.com/embed//k1NA_lPIqpA?si=7BcyIuD3y5MKlG&amp;controls=1&autoplay=1&mute=1&loop=1&playlist=k1NA_lPIqpA"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
@@ -191,7 +191,7 @@ const Copy = ({ opacity }: { opacity: MotionValue }) => {
 
           <source src={videoSrc} type="video/mp4" />
         </video> */}
-        <div className="bg-gradient-to-t from-black  z-0 h-72 w-full absolute bottom-0 left-0"></div>
+        <div className="bg-gradient-to-t from-black  z-0 h28 w-full absolute bottom-0 left-0"></div>
 
         <div className="  flex gap-2 -mb-12 md:mb-0 -ml-[30vw] md:-ml-[20vw] lg:-ml-[14vw]   z-40 relative   rounded-lg p-1  text-center text-3xl font-black md:text-5xl text-neutral-50 ">
           Building

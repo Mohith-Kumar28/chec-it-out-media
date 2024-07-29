@@ -106,7 +106,7 @@ const Images = ({
         }}
       >
         <Image
-          src="/works/topCenter.jpg"
+          src="/works/topCenter.png"
           alt="Bottom Center"
           layout="fill"
           objectFit="cover"
@@ -213,7 +213,7 @@ const Images = ({
         }}
       >
         <Image
-          src="/works/bottomCenter.jpg"
+          src="/works/bottomCenter.png"
           alt="Bottom Center"
           layout="fill"
           objectFit="cover"
