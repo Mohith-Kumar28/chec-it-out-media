@@ -1,5 +1,5 @@
 "use client";
-import { SiInstagram, SiLinkedin, SiTwitter, SiYoutube } from "react-icons/si";
+import { SiInstagram, SiLinkedin, SiYoutube } from "react-icons/si";
 import React, { Dispatch, ReactNode, SetStateAction, useState } from "react";
 import {
   AnimatePresence,
@@ -21,6 +21,7 @@ import {
   PiLinkedinLogo,
   PiWhatsappLogo,
 } from "react-icons/pi";
+import { CgTwitter } from "react-icons/cg";
 
 const CornerNav = () => {
   return (
@@ -365,7 +366,7 @@ const LINKS = [
 
 const SOCIAL_CTAS = [
   {
-    Component: SiTwitter,
+    Component: CgTwitter,
     href: "#",
   },
   {
