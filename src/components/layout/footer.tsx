@@ -4,6 +4,11 @@ import Image from "next/image";
 import Hiring from "../hiring";
 
 const Footer = () => {
+  const links = [
+    { name: "Refund Policy", url: "https://docs.google.com/document/d/1Pyh36CwSGrBPZT7ljtJnoGqsuMC83ytS2iHS1yjRj20/edit?usp=sharing" },
+    { name: "T&C", url: "https://docs.google.com/document/d/1zr-kn-m0QdMP49HSeQ_TCaUFjO9KWTAHnybCXuMCBu8/edit?usp=sharing" },
+    { name: "Privacy Policy", url: "https://docs.google.com/document/d/1vnHW0gFN-8bSlmL4aorobSXus4IIUq8u8OvJUqsCTGA/edit?usp=sharing" },
+  ];
   return (
     <footer className="text-gray-600 bg-zinc-950 body-font border-t border-gray-600">
       <div className="container px-5 py-8 gap-4 mx-auto flex items-center sm:flex-row flex-col">
@@ -100,6 +105,15 @@ const Footer = () => {
         {/* <div className="flex md:justify-end w-full ">
           <Hiring />
         </div> */}
+
+<div className="flex md:justify-end w-full text-gray-300">
+        {links.map((link, index) => (
+          <a key={index} href={link.url} target="_blank" rel="noopener noreferrer" className="mx-2 hover:underline">
+            {link.name}
+          </a>
+        ))}
+      </div>
+
       </div>
     </footer>
   );
