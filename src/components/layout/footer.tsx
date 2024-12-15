@@ -5,9 +5,9 @@ import Hiring from "../hiring";
 
 const Footer = () => {
   const links = [
-    { name: "Refund Policy", url: "/refund_policy" },
+    { name: "Refund Policy", url: "/refund_policy.pdf" },
     { name: "T&C", url: "terms_and_conditions.pdf" },
-    { name: "Privacy Policy", url: "/privacy_policy" },
+    { name: "Privacy Policy", url: "/privacy_policy.pdf" },
   ];
 
   return (
